@@ -1,0 +1,5 @@
+db:
+  url:
+    - postgres://pqtest:shgbit@localhost/testdb?sslmode=disable
+  eventip:
+    - http://192.168.16.142:10678/notify
