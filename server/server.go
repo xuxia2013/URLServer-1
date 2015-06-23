@@ -34,7 +34,11 @@ func Start(){
 	Pq.Create()
 	v1:=router.Group("/v1")
 	{
+	   v1.POST("/webtag",setwebtag)
+    	   v1.DELETE("/webtag/:id",delwebtag)
 		
+	   v1.GET("/webtag",getwebtag)
+	   v1.GET("/webtag/:id",getwebtagid)
 	}
 	logger.Log.Info("linsten 10013")
 	http.ListenAndServe(":10013",router)
